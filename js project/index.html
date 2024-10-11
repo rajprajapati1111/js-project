@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js project</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/index.js">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <audio id="audio" src="Iphone Message Tone Download.mp3" ></audio>
+
+        <div id="mybox" onclick="changecolor()">
+            A 😀
+        </div>
+        <div id="hello" onclick="changecolortwo()">
+            B 😀
+        </div>
+        <div id="box" onclick="changecolorthree()">
+            C 😀
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+
+        function changecolor() {
+            document.getElementById('mybox').style.background = "#ed4330";
+            document.getElementById('mybox').style.color = 'white';
+            let audio = document.getElementById("audio");
+            audio.play();
+           
+
+        }
+        function changecolortwo() {
+
+            document.getElementById('hello').style.background = "blue";
+            document.getElementById('hello').style.color = 'white';
+            let audio = document.getElementById("audio");
+            audio.play();
+
+        }
+        function changecolorthree() {
+
+            document.getElementById('box').style.background = "yellow";
+            document.getElementById('box').style.color = 'white';
+            let audio = document.getElementById("audio");
+            audio.play();
+
+
+        }
+        document.addEventListener('keydown',(event)=>{
+                if(event.key === 'a' || event.key === 'A'  ){
+                    let audio = document.getElementById("audio");
+                    audio.play();
+                    document.getElementById('mybox').style.background = "#ed4330";
+                    document.getElementById('mybox').style.color = 'white';
+                }
+                if(event.key === 'b' || event.key === 'B'  ){
+                    let audio = document.getElementById("audio");
+                    audio.play();
+                    document.getElementById('hello').style.background = "blue";
+                    document.getElementById('hello').style.color = 'white';
+                }
+                if(event.key === 'c' || event.key === 'C'  ){
+                    let audio = document.getElementById("audio");
+                    audio.play();
+                    document.getElementById('box').style.background = "yellow";
+                    document.getElementById('box').style.color = 'white';
+                }
+            })
+
+
+    </script>
+
+</body>
+
+</html>
